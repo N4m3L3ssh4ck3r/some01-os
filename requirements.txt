@@ -1,0 +1,4 @@
+sty
+GitPython
+rich
+configparser
