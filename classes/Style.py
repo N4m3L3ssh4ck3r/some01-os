@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-## Summon - some01 LINUX Build Tool
+## some01 - some01 LINUX Build Tool
 ##  This is the future of some01 Linux.
 ## Python Class: Style - Style the app with color.
 ##
@@ -39,10 +39,25 @@ class Style:
     def prnt_install(self,app,category):
         print(f" {self.subapp}{self.ORAN}{self.BOLD}Installing{self.RST} {self.PPIN}─ {self.PPUR}{self.CYAN}{app} {self.PPUR}({category}){self.RST}{self.RST}{self.PPIN} ─ {self.PPUR}]{self.RST}")
         return
+    ## Display a Text Banner at each run:
+    def banner_text(self):
+        print(f"""
+      {self.PPIN}██████  █    ██  ███▄ ▄███{self.PINK}▓{self.PPIN} ███▄ ▄███▓ ▒█████   ███▄    █
+    {self.PINK}▒{self.PPIN}██    {self.PINK}▒{self.PPIN}  ██  {self.PINK}▓{self.PPIN}██{self.PINK}▒▓{self.PPIN}██▒▀█▀ ██▒▓██▒▀█▀ ██{self.PINK}▒▒{self.PPIN}██{self.PINK}▒{self.PPIN}  ██▒ ██ ▀█   █
+    {self.PINK}░ ▓{self.PPIN}██▄   ▓██  {self.PINK}▒{self.PPIN}██{self.PINK}░▓{self.PPIN}██    ▓██{self.PINK}░▓{self.PPIN}██    ▓██{self.PINK}░▒{self.PPIN}██{self.PINK}░{self.PPIN}  ██▒▓██  ▀█ ██{self.PINK}▒{self.PPIN}
+      {self.PINK}▒{self.PPIN}   ██▒▓▓█  {self.PINK}░{self.PPIN}██{self.PINK}░▒{self.PPIN}██    ▒██{self.PINK} ▒{self.PPIN}██    ▒██{self.PINK} ▒{self.PPIN}██   ██░▓██{self.PINK}▒{self.PPIN}   ██{self.PINK}▒{self.PPIN}
+    {self.PINK}▒{self.PPIN}██████▒▒▒▒█████{self.PINK}▓ ▒{self.PPIN}██{self.PINK}▒{self.PPIN}   ░██{self.PINK}▒▒{self.PPIN}██▒   ░██▒░ ████▓▒░▒██{self.PINK}░{self.PPIN}   ▓██{self.PINK}░{self.PPIN}
+    {self.PINK}▒ ▒▓▒ ▒ ░░▒▓▒ ▒ ▒ ░ ▒░   ░  ░░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒
+    ░ ░▒  ░ ░░░▒░ ░ ░ ░  ░      ░░  ░      ░  ░ ▒ ▒░ ░ ░░   ░ ▒░
+    ░  ░  ░   ░░░ ░ ░ ░      ░   ░      ░   ░ ░ ░ ▒     ░   ░ ░
+          ░     ░            ░          ░       ░ ░           ░
+
+           {self.RED}{self.BOLD}some01 Linux{self.RST}{self.BOLD} some01er - 2022 {self.PPUR}@RackunSec{self.RST} 😈
+    """)
 
     ## Define the apps usage:
     def usage(self):
-      print(f" 🔥 {self.ORAN}{self.BOLD}Usage:{self.RST}\n      python3 summon.py {self.PPIN}(Arguments){self.RST}\n")
+      print(f" 🔥 {self.ORAN}{self.BOLD}Usage:{self.RST}\n      python3 some01.py {self.PPIN}(Arguments){self.RST}\n")
       print(f" 🔥 {self.ORAN}{self.BOLD}Arguments:{self.RST}")
       print(f"      {self.PPIN}install{self.CMNT} - Install some01 and applications{self.RST}")
       print(f"      {self.PPIN}list-apps{self.CMNT} - List all Redteam apps in local repository{self.RST}")
@@ -51,17 +66,3 @@ class Style:
       print(f"      {self.PPIN}upgrade{self.CMNT} - Upgrade your some01 app repository{self.RST}")
       print(f"      {self.PPIN}restore-repo{self.CMNT} - Restores a broken repository from backup{self.RST}\n")
       exit(1337) ## Exit with code
-
-    ## Show some installation examples:
-    def install_examples(self):
-      print(f"{self.fail} Nothing to install!")
-      print(f"\n 🔥 {self.ORAN}{self.BOLD}Install Examples:{self.RST}")
-      print(f"      {self.PPIN}install {self.PINK}some01{self.CMNT} - Install some01 UI{self.RST}")
-      print(f"      {self.PPIN}install {self.PINK}some01 -u (Username){self.CMNT} - Install some01 UI for non-root user{self.RST}\n")
-      print(f"      {self.PPIN}install {self.PINK}add{self.CMNT} - Install all applications with \"add\" set to \"True\"{self.RST}")
-      print(f"      {self.PPIN}install {self.PINK}add --force{self.CMNT} - Same as above but using force{self.RST}\n")
-      print(f"      {self.PPIN}install {self.PINK}all{self.CMNT} - Install all applications from repository{self.RST}")
-      print(f"      {self.PPIN}install {self.PINK}all --force{self.CMNT} - Same as above but using force{self.RST}\n")
-      print(f"      {self.PPIN}install {self.PINK}(Application){self.CMNT} - Install single application{self.RST}")
-      print(f"      {self.PPIN}install {self.PINK}(Application) --force{self.CMNT} - Same as above but using force\n{self.RST}")
-      return
